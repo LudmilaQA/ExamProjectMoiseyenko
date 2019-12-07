@@ -58,7 +58,6 @@ public class WomanPage extends ParentPage {
         actionsWithOurElements.clickOnElement(clickOnButtonFullHeart);
     }
 
-
     public void checkIsLinkFavouritesDisplayed() {
         Assert.assertTrue("Link profile is not displayed", isLinkFavouritesDisplayed());
     }

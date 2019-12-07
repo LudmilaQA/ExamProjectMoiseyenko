@@ -32,7 +32,7 @@ public class ActionsWithOurElements {
         }
     }
 
-    /*    public boolean isLinkProfileDisplayed (WebElement webElement) {
+        public boolean isLinkProfileDisplayed (WebElement webElement) {
             try {
                 boolean state = webElement.isDisplayed();
                 logger.info("Is link profile displayed -> " + state);
@@ -43,7 +43,7 @@ public class ActionsWithOurElements {
                 return false;
             }
         }
-    */
+
     public boolean isLinkDisplayed(WebElement webElement) {
         try {
             boolean state = webElement.isDisplayed();

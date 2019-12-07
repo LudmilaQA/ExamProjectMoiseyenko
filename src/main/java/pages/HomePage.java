@@ -16,18 +16,23 @@ public class HomePage extends ParentPage {
     @FindBy(xpath = ".//*[@id='site-menu']/ul/li/a[text()='Женщинам']")
     private WebElement linkWoman;
 
+    @FindBy (xpath = ".//a[@href='/orders']")
+    private WebElement linkOrders;
+
     public HomePage(WebDriver webDriver) {
         super(webDriver);
     }
 
     public boolean isLinkProfileDisplayed() {
-              try {
-           WebElement linkProfile = webDriver.findElement(By.xpath(".//*[@id='tiny-menu']/ul/li/a[text()=' Людмила Мойсеєнко']"));
-          return linkProfile.isDisplayed();
-      } catch (Exception e) {
-     return false;
-        }
-//        return actionsWithOurElements.isLinkProfileDisplayed(linkProfile);
+ //             try {
+//          WebElement linkProfile = webDriver.findElement(By.xpath(".//*[@id='tiny-menu']/ul/li/a[text()=' Людмила Мойсеєнко'"));
+//          return linkProfile.isDisplayed();
+//     } catch (Exception e) {
+//     return false;
+//       }
+
+
+       return actionsWithOurElements.isLinkProfileDisplayed(linkProfile);
     }
 
     public void checkIsLinkProfileDisplayed() {
@@ -36,5 +41,9 @@ public class HomePage extends ParentPage {
 
     public void clickOnLinkWoman() {
         actionsWithOurElements.clickOnElement(linkWoman);
+    }
+
+    public void clickOnLinkOrders() {
+        actionsWithOurElements.clickOnElement(linkOrders);
     }
 }
