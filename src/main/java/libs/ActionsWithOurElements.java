@@ -32,7 +32,7 @@ public class ActionsWithOurElements {
         }
     }
 
-    public boolean isLinkProfileDisplayed (WebElement webElement) {
+/*    public boolean isLinkProfileDisplayed (WebElement webElement) {
         try {
             boolean state = webElement.isDisplayed();
             logger.info("Is link profile displayed -> " + state);
@@ -43,9 +43,39 @@ public class ActionsWithOurElements {
             return false;
         }
     }
+*/
+public boolean isLinkDisplayed (WebElement webElement) {
+    try {
+        boolean state = webElement.isDisplayed();
+        logger.info("Is link displayed -> " + state);
+        return state;
 
+    } catch (Exception e) {
+        logger.info("Is link displayed -> false");
+        return  false;
+
+    }
+}
     private void stopTestAndPrintMessage() {
            logger.error("Cannot work with element ");
            Assert.fail("Cannot work with element ");
     }
+
+    public boolean isFavouritesDisplayed (WebElement webElement) {
+        try {
+            boolean state = webElement.isDisplayed();
+            logger.info("Is link favourites displayed -> true");
+            return true;
+
+        } catch (Exception e) {
+            logger.info("Is link favourites displayed -> false");
+            return false;
+        }
+    }
+
+//    public boolean isFavouritesDisplayed(WebElement webElement) {
+//        return true;
+//    }
+
+
 }

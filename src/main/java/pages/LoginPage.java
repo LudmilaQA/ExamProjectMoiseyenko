@@ -64,5 +64,14 @@ public class LoginPage extends ParentPage {
 //        logger.info(" Button was clicked");
         actionsWithOurElements.clickOnElement(buttonVoiti);
     }
+
+    public void fillingLoginFormAndSubmitIt(String login, String pass) {
+        openPage();
+        clickOnLinkVhod();
+        enterLoginInToInputLogin(login);
+        enterPassInToInputPassWord(pass);
+        clickOnButtonVoiti();
+
+    }
 }
 
