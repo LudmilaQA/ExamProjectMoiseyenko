@@ -8,20 +8,15 @@ import parentPage.ParentPage;
 
 public class WomanPage extends ParentPage {
 
-
     @FindBy(xpath = ".//a[@href = '/catalog/woman/sort=3']")
     private WebElement sortSubMenu;
 
     @FindBy(id= "dropdownSortMenu")
     private WebElement clickOnButtonDD;
 
-//    @FindBy(xpath = "//*[@data-original-title='Добавить в избранное']")
-//    private WebElement clickOnFirstElement;
-
     @FindBy (xpath = "//*[@ class='iconfont-heart-empty']")
     private WebElement clickOnButtonHeart;
 
-//    @FindBy (xpath = ".//*[@id='tiny-menu']/ul/li/a[text()='Избранное'])")
     @FindBy (xpath = ".//a[@href='/favorites']")
     private WebElement favouriteProfile;
 
@@ -50,16 +45,12 @@ public class WomanPage extends ParentPage {
         actionsWithOurElements.clickOnElement(clickOnButtonDD);
     }
 
-
-
     public void clickOnButtonHeart() {
         actionsWithOurElements.clickOnElement(clickOnButtonHeart);
     }
 
-
-
     public boolean isLinkFavouritesDisplayed() {
-        actionsWithOurElements.isFavouritesDisplayed(favouriteProfile);
+       actionsWithOurElements.isFavouritesDisplayed(favouriteProfile);
         return true;
     }
 

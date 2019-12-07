@@ -23,45 +23,45 @@ public class ActionsWithOurElements {
         }
     }
 
-    public void clickOnElement (WebElement webElement) {
+    public void clickOnElement(WebElement webElement) {
         try {
-           webElement.click();
-           logger.info(" Element was clicked");
+            webElement.click();
+            logger.info(" Element was clicked");
         } catch (Exception e) {
             stopTestAndPrintMessage();
         }
     }
 
-/*    public boolean isLinkProfileDisplayed (WebElement webElement) {
+    /*    public boolean isLinkProfileDisplayed (WebElement webElement) {
+            try {
+                boolean state = webElement.isDisplayed();
+                logger.info("Is link profile displayed -> " + state);
+                return state;
+
+            } catch (Exception e) {
+                logger.info("Is link profile displayed -> false");
+                return false;
+            }
+        }
+    */
+    public boolean isLinkDisplayed(WebElement webElement) {
         try {
             boolean state = webElement.isDisplayed();
-            logger.info("Is link profile displayed -> " + state);
+            logger.info("Is link displayed -> " + state);
             return state;
 
         } catch (Exception e) {
-            logger.info("Is link profile displayed -> false");
+            logger.info("Is link displayed -> false");
             return false;
         }
     }
-*/
-public boolean isLinkDisplayed (WebElement webElement) {
-    try {
-        boolean state = webElement.isDisplayed();
-        logger.info("Is link displayed -> " + state);
-        return state;
 
-    } catch (Exception e) {
-        logger.info("Is link displayed -> false");
-        return  false;
-
-    }
-}
     private void stopTestAndPrintMessage() {
-           logger.error("Cannot work with element ");
-           Assert.fail("Cannot work with element ");
+        logger.error("Cannot work with element ");
+        Assert.fail("Cannot work with element ");
     }
 
-    public boolean isFavouritesDisplayed (WebElement webElement) {
+    public boolean isFavouritesDisplayed(WebElement webElement) {
         try {
             boolean state = webElement.isDisplayed();
             logger.info("Is link favourites displayed -> true");
@@ -73,9 +73,6 @@ public boolean isLinkDisplayed (WebElement webElement) {
         }
     }
 
-//    public boolean isFavouritesDisplayed(WebElement webElement) {
-//        return true;
-//    }
-
-
 }
+
+

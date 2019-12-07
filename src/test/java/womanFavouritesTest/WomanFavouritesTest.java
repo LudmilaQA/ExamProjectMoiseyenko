@@ -16,7 +16,7 @@ public class WomanFavouritesTest extends AbstractParentTest {
 
 //        womanPage.clickOnFirstElement();
         womanPage.clickOnButtonHeart();
-        checkExpectedResult("Link favourites is present with number", womanPage.isLinkFavouritesDisplayed());
+        checkExpectedResult("Link favourites is present with number", womanPage.isLinkFavouritesDisplayed() );
     }
     @After
     public void deleteFromFavourites () {
