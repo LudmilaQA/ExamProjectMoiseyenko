@@ -50,8 +50,9 @@ public class WomanPage extends ParentPage {
     }
 
     public boolean isLinkFavouritesDisplayed() {
-       actionsWithOurElements.isFavouritesDisplayed(favouriteProfile);
-        return true;
+ //      actionsWithOurElements.isFavouritesDisplayed(favouriteProfile);
+//        return true;
+        return actionsWithOurElements.isFavouritesDisplayed(favouriteProfile);
     }
 
     public void deleteFromFavouriresAfterAdding() {
@@ -59,7 +60,7 @@ public class WomanPage extends ParentPage {
     }
 
     public void checkIsLinkFavouritesDisplayed() {
-        Assert.assertTrue("Link profile is not displayed", isLinkFavouritesDisplayed());
+        Assert.assertFalse("Link profile is not displayed", isLinkFavouritesDisplayed());
     }
 
     public void clickOnLogoGarne() {
