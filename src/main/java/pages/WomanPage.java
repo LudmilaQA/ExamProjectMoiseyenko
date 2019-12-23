@@ -37,8 +37,8 @@ public class WomanPage extends ParentPage {
     }
 
 
-    public boolean isSortUrlDisplayed(String s) {
-        return true;
+    public String isSortUrlDisplayed() {
+        return actionsWithOurElements.getCurrentUrl();
     }
 
     public void clickOnButtonDD() {

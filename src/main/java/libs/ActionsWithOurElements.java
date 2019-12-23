@@ -43,7 +43,9 @@ public class ActionsWithOurElements {
                 return false;
             }
         }
-
+public String getCurrentUrl() {
+        return webDriver.getCurrentUrl();
+}
     public boolean isLinkDisplayed(WebElement webElement) {
         try {
             boolean state = webElement.isDisplayed();
