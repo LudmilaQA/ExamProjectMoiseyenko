@@ -43,4 +43,8 @@ public class AbstractParentTest {
     protected void checkExpectedResult(String message, boolean actualResult) {
         Assert.assertEquals(message, true, actualResult);
     }
+
+    protected void checkExpectedResult(String message, String actualResult, String expected) {
+        Assert.assertEquals(message, expected, actualResult);
+    }
 }

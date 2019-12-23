@@ -15,7 +15,8 @@ public class WomanTest extends AbstractParentTest {
         womanPage.clickOnButtonDD();
         womanPage.clickOnHighToLowPrice();
 
-        checkExpectedResult("Cannot find sort submenu", womanPage.isSortUrlDisplayed("https://garne.com.ua/catalog/woman/sort=3"));
+
+        checkExpectedResult("Cannot find sort submenu","https://garne.com.ua/catalog/woman/sort=3", womanPage.isSortUrlDisplayed());
     }
 
 }
